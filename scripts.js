@@ -21,6 +21,7 @@ function switchLanguage(language) {
         sectionsEn.forEach(function(section) {
             section.style.display = 'none';
         });
+        showSection('home-ja'); // 初期表示のセクションを設定
     } else if (language === 'en') {
         navJa.style.display = 'none';
         navEn.style.display = 'block';
@@ -30,6 +31,7 @@ function switchLanguage(language) {
         sectionsEn.forEach(function(section) {
             section.style.display = 'block';
         });
+        showSection('home-en'); // 初期表示のセクションを設定
     }
 }
 
