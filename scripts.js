@@ -15,10 +15,14 @@ function switchLanguage(language) {
         document.getElementById('home-ja').classList.add('active');
         document.getElementById('profile-ja').classList.add('active');
         document.getElementById('contact-ja').classList.add('active');
+        document.getElementById('nav-ja').style.display = 'block';
+        document.getElementById('nav-en').style.display = 'none';
     } else if (language === 'en') {
         document.getElementById('home-en').classList.add('active');
         document.getElementById('profile-en').classList.add('active');
         document.getElementById('contact-en').classList.add('active');
+        document.getElementById('nav-ja').style.display = 'none';
+        document.getElementById('nav-en').style.display = 'block';
     }
 }
 
