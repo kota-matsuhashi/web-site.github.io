@@ -4,78 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>自己紹介</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-        .container {
-            width: 80%;
-            margin: auto;
-            overflow: hidden;
-        }
-        header {
-            background: #333;
-            color: #fff;
-            padding-top: 30px;
-            min-height: 70px;
-            border-bottom: #77aaff 3px solid;
-        }
-        header a {
-            color: #fff;
-            text-decoration: none;
-            text-transform: uppercase;
-            font-size: 16px;
-        }
-        header ul {
-            padding: 0;
-            list-style: none;
-        }
-        header li {
-            float: left;
-            display: inline;
-            padding: 0 20px 0 20px;
-        }
-        header #branding {
-            float: left;
-        }
-        header #branding h1 {
-            margin: 0;
-        }
-        header nav {
-            float: right;
-            margin-top: 10px;
-        }
-        #showcase {
-            min-height: 400px;
-            background: #333;
-            color: #fff;
-            text-align: center;
-            padding-top: 100px;
-        }
-        #showcase h1 {
-            font-size: 55px;
-            margin-top: 0;
-        }
-        #showcase p {
-            font-size: 20px;
-        }
-        #main {
-            padding: 20px;
-            background: #fff;
-        }
-        footer {
-            background: #333;
-            color: #fff;
-            text-align: center;
-            padding: 10px;
-            margin-top: 20px;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
 </head>
-<body>
+<body onload="showSection('home')">
     <header>
         <div class="container">
             <div id="branding">
@@ -83,28 +15,37 @@
             </div>
             <nav>
                 <ul>
-                    <li><a href="#">ホーム</a></li>
-                    <li><a href="#">プロフィール</a></li>
-                    <li><a href="#">連絡先</a></li>
+                    <li><a href="#" onclick="showSection('home')">ホーム</a></li>
+                    <li><a href="#" onclick="showSection('profile')">プロフィール</a></li>
+                    <li><a href="#" onclick="showSection('contact')">連絡先</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <section id="showcase">
+    <section id="home" class="section active">
         <div class="container">
             <h1>ようこそ、私のホームページへ</h1>
             <p>ここでは私の情報を紹介します。</p>
         </div>
     </section>
 
-    <section id="main" class="container">
-        <h2>プロフィール</h2>
-        <p>ここに自己紹介文を記載します。例えば、名前、職業、趣味、経歴など。</p>
+    <section id="profile" class="section">
+        <div class="container">
+            <h2>プロフィール</h2>
+            <p>ここに自己紹介文を記載します。例えば、名前、職業、趣味、経歴など。</p>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <div class="container">
+            <h2>連絡先</h2>
+            <p>ここに連絡先情報を記載します。</p>
+        </div>
     </section>
 
     <footer>
-        <p>Copyright &copy; 2025 自己紹介ページ</p>
+        <p>&copy; 2025 自己紹介ページ</p>
     </footer>
 </body>
 </html>
