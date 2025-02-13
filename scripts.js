@@ -7,22 +7,29 @@ function showSection(sectionId) {
 }
 
 function switchLanguage(language) {
-    var sections = document.querySelectorAll('.section');
-    sections.forEach(function(section) {
-        section.classList.remove('active');
-    });
+    var navJa = document.getElementById('nav-ja');
+    var navEn = document.getElementById('nav-en');
+    var sectionsJa = document.querySelectorAll('#home-ja, #profile-ja, #contact-ja');
+    var sectionsEn = document.querySelectorAll('#home-en, #profile-en, #contact-en');
+
     if (language === 'ja') {
-        document.getElementById('home-ja').classList.add('active');
-        document.getElementById('profile-ja').classList.add('active');
-        document.getElementById('contact-ja').classList.add('active');
-        document.getElementById('nav-ja').style.display = 'block';
-        document.getElementById('nav-en').style.display = 'none';
+        navJa.style.display = 'block';
+        navEn.style.display = 'none';
+        sectionsJa.forEach(function(section) {
+            section.classList.add('active');
+        });
+        sectionsEn.forEach(function(section) {
+            section.classList.remove('active');
+        });
     } else if (language === 'en') {
-        document.getElementById('home-en').classList.add('active');
-        document.getElementById('profile-en').classList.add('active');
-        document.getElementById('contact-en').classList.add('active');
-        document.getElementById('nav-ja').style.display = 'none';
-        document.getElementById('nav-en').style.display = 'block';
+        navJa.style.display = 'none';
+        navEn.style.display = 'block';
+        sectionsJa.forEach(function(section) {
+            section.classList.remove('active');
+        });
+        sectionsEn.forEach(function(section) {
+            section.classList.add('active');
+        });
     }
 }
 
