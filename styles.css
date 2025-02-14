@@ -41,6 +41,16 @@ header nav {
     float: right;
     margin-top: 10px;
 }
+footer {
+    background: #333;
+    color: #fff;
+    padding-top: 10px;
+    min-height: 70px;
+    border-top: #77aaff 3px solid;
+}
+footer p {
+    text-align: center;
+}
 #language-switcher {
     float: right;
     margin-top: 10px;
